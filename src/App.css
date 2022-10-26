@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/* cursor */
+
+/* sidebar */
+.sidebar {position: fixed; left: 0; top: 0; bottom: 0; width: 320px; height: 100%; background: #1f1f1f; border-right: 1px solid rgba(255, 255, 255, 0.3); padding: 50px 15px; box-sizing: border-box; transition: width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;}
+.sidebar h1 {margin-top: 65px;}
+.sidebar h1 a {position: relative; left: -8px; display: block; width: 70px; margin-bottom: 55px;}
+.sidebar li {white-space: nowrap;}
+.sidebar li a {display: block; background: transparent; border-radius: 10px; font-size: 18px; font-weight: 700; padding: 15px; margin: 10px 0; transition: all 0.2s;}
+.sidebar li:hover a {background: #35cda7;}
+.sidebar li a img {position: relative; top: 2px; right: -2px; margin-right: 12px;}
+
+.btn_sidebar {position: absolute; right: 30px; top: 60px; display: inline-block; width: 45px; height: 45px; border: 3px solid #fff; border-radius: 10px; background: #1f1f1f; transition: all 0.3s;}
+.btn_sidebar::after {display: block; content: ''; width: 100%; height: 100%; background: url(/public/assets/images/arr_left.png) no-repeat center; background-size: 15px;}
+.btn_sidebar:hover {border-radius: 100%;}
+.btn_sidebar:hover::after {animation: arrMotion 0.35s linear 0s infinite alternate;}
+
+.open .sidebar {width: 85px;}
+.open .sidebar li a img {margin-right: 0;}
+.open .sidebar li a span {opacity: 0;visibility: hidden;font-size: 0;}
+.open .sidebar .btn_sidebar {right: 20px;}
+.open .btn_sidebar::after {transform: rotate(180deg);}
+.open .btn_sidebar:hover::after {animation: arrMotion02 0.35s linear 0s infinite alternate;}
+.open .sidebar .profile dl dd {display: none;}
+
+/* menu tootip */
+.open .sidebar .tooltip {position: relative;}
+.open .sidebar .tooltip span {visibility: hidden; min-width: 70px; height: 30px; line-height: 29px; padding-left: 0; padding: 0 10px; border-radius: 15px;text-align: center;color: #fff;background-color: #fff;opacity: 0;transition: opacity 1s;z-index: 10;position: absolute; left: 170%; top:50%; transform: translateY(-50%); font-size: 14px; font-weight: normal; text-indent: 0; color: #222; box-sizing: border-box;}
+.open .sidebar .tooltip span::after {display: block; content: " "; position: absolute; top: 50%; transform: translateY(-50%); right: 100%; margin-right: -4px; background: url(/public/assets/images/tri_left.png) no-repeat; width: 10px; height: 14px;}
+.open .sidebar .tooltip:hover span {visibility: visible; opacity: 1;}
+
+/* profile */
+.profile {position: absolute; bottom: 70px; left: 20px; white-space: nowrap;}
+.profile dl dt {display: inline-block; vertical-align: middle; width: 40px; height: 40px; background: #fff; border-radius: 100%; margin-right: 10px; overflow: hidden;}
+.profile dl dd {display: inline-block; vertical-align: middle; font-size: 15px; font-weight: 500;}
+.profile .tip {position: absolute; top: -50px; width: 200px; height: 30px; line-height: 30px; color: #222; background: #fff; border-radius: 20px; text-align: center; font-size: 14px; font-weight: 700; transition: opacity 0.3s;}
+.profile .tip::after {display: block; content: ''; width: 14px; height: 10px; background: url(/public/assets/images/tri_down.png) no-repeat; position: relative; left: 13px; top: -2px;}
+.profile .tip strong {color: #35cda7;}
+
+.open .profile .tip {opacity: 0; visibility: hidden;}
+.open .profile:hover .tip {opacity: 1; visibility: visible;}
+
+@keyframes arrMotion {0% {transform:translateX(-4px);}100% {transform:translateX(0);}}
+@keyframes arrMotion02 {0% {transform:rotate(180deg) translateX(0);}100% {transform:rotate(180deg) translateX(-4px);}}
+
+.inner {padding: 100px 100px 100px 420px;}
+.open .inner {padding: 100px 100px 100px 185px;}
+
+/* project */
+.all-projects {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); grid-column-gap: 2rem; grid-row-gap: 2rem; margin-top: 50px;}
+.all-projects > div {max-width: 300px !important;}
+.all-projects img {width: 100%; height: auto; object-fit: cover; border-radius: 1rem; margin-bottom: 1rem;}
+.all-projects h2 {font-size: 1.2rem; margin-bottom: 10px;}
+.all-projects p {font-size: 1rem;}
+.filter-container button {margin-right: 20px; min-width: 100px; padding: 10px 15px 12px; background: transparent; border: 1px solid #fff; border-radius: 10px; font-size: 16px; font-weight: 700; color: #fff; box-sizing: border-box; transition: all 0.3s;} 
+.filter-container button:hover {background: #35cda7; border-color: #35cda7;}
+.filter-container button.active {background: #35cda7; border-color: #35cda7;}
