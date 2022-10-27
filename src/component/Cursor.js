@@ -21,36 +21,6 @@ export default function Cursor() {
       window.removeEventListener("mousemove", moveCursor);
     };
   }, []);
-/*   const variants = {
-    default: {
-      opacity: 1,
-      height: 10,
-      width: 10,
-      backgroundColor: "#fff",
-      x: mouseXPosition,
-      y: mouseYPosition,
-      transition: {
-        type: "spring",
-        mass: 0.6
-      }
-    },
-    aEvent: {
-      opacity: 1,
-      backgroundColor: "#FFBCBC",
-      height: 40,
-      width: 40,
-      x: mouseXPosition - 48,
-      y: mouseYPosition - 48
-    }
-    };
-    
-      function aEventEnter(event) {
-        setCursorVariant("contact");
-      }
-    
-      function aEventLeave(event) {
-        setCursorVariant("default");
-      } */
 
   return (
       <motion.div
