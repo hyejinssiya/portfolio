@@ -7,12 +7,14 @@ import Home from "./pages/Home";
 import Project01 from "./pages/Project01";
 import Project02 from "./pages/Project02";
 import Profile from "./pages/Profile";
+import Cursor from "./component/Cursor";
 
 function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}> 
       <Wrap>
-      <Sidebar />
+        <Cursor />
+        <Sidebar />
         <Inner>
         <Routes>
           <Route
