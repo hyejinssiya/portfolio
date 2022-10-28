@@ -17,7 +17,7 @@ const Home = () => {
      >
         <motion.p className="bg_txt" style={{ x }}>
          Hello, I'm PUBLISHER Hello, I'm PUBLISHER Hello, I'm PUBLISHER
-        </motion.p>  
+        </motion.p>   
      </div>
    </div>
   );
