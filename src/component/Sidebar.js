@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import React, { useState, useHistory } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 
 const Sidebar = (props) => {
@@ -35,7 +35,8 @@ const Sidebar = (props) => {
         setIsHovering(false);
     };
 
-
+    const history = useHistory();
+    
     //메뉴리스트
     const [selectedIndex, setSelectedIndex] = useState(0);
     const listItem = menus.map((menu, index) =>
