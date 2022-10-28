@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 
 const Sidebar = (props) => {
@@ -34,17 +34,23 @@ const Sidebar = (props) => {
     const handleMouseOut = () => {
         setIsHovering(false);
     };
-    
+
+
     //메뉴리스트
-    const listItem = menus.map((menu, idx) =>
-        <li key={menu.id}><Link to={menu.link} className={isHovering ? 'tooltip' : ''} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}><img src={menu.img} alt={menu.menu} /><span>{menu.menu}</span></Link></li>
+    const [selectedIndex, setSelectedIndex] = useState(0);
+    const listItem = menus.map((menu, index) =>
+        <li key={index} className={`${selectedIndex === index ? "active" : ""}`}  onClick={() => setSelectedIndex(index)}>
+            <NavLink to={menu.link} className={isHovering ? 'tooltip' : ''} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+                <img src={menu.img} alt={menu.menu} /><span>{menu.menu}</span>
+            </NavLink> 
+        </li>
     );
     //여닫기버튼 클릭
     // eslint-disable-next-line no-unused-vars
-    const [isActive, setIsActive] = useState(false);
+    const [isActived, setIsActived] = useState(false);
 
     const handleCheck = () => {
-        setIsActive((prev) => !prev);
+        setIsActived((prev) => !prev);
         var wrap = document.querySelector('.wrap') 
         wrap.classList.toggle('open');
     }
