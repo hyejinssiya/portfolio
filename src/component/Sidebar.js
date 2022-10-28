@@ -34,11 +34,13 @@ const Sidebar = (props) => {
     const handleMouseOut = () => {
         setIsHovering(false);
     };
+    
     //메뉴리스트
-    const listItem = menus.map((menu) =>
+    const listItem = menus.map((menu, idx) =>
         <li key={menu.id}><Link to={menu.link} className={isHovering ? 'tooltip' : ''} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}><img src={menu.img} alt={menu.menu} /><span>{menu.menu}</span></Link></li>
     );
     //여닫기버튼 클릭
+    // eslint-disable-next-line no-unused-vars
     const [isActive, setIsActive] = useState(false);
 
     const handleCheck = () => {
