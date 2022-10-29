@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import './App.css';
 import Sidebar from "./component/Sidebar";
 import Wrap from "./component/Wrap";
@@ -16,6 +17,7 @@ function App() {
         <Cursor />
         <Sidebar />
         <Inner>
+        <AnimatePresence>
         <Routes>
           <Route
             path="/project01"
@@ -34,6 +36,7 @@ function App() {
               element={<Home />}
               exact />
           </Routes>
+          </AnimatePresence>
         </Inner>
       </Wrap>
     </BrowserRouter>

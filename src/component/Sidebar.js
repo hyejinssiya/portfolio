@@ -1,8 +1,10 @@
-import React, { useState, useHistory } from 'react';
+import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 
 const Sidebar = (props) => {
+    /* const navigate = useNavigate(); 
+    function handleClick() { navigate("/"); } */
     //메뉴배열
     const menus = [
         {
@@ -35,7 +37,6 @@ const Sidebar = (props) => {
         setIsHovering(false);
     };
 
-    const history = useHistory();
     
     //메뉴리스트
     const [selectedIndex, setSelectedIndex] = useState(0);

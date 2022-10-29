@@ -1,8 +1,13 @@
 import React from 'react'
+import { motion } from "framer-motion";
 
 const Profile = (props) => { 
   return (
-    <>
+    <motion.div
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        exit={{opacity: 0}}
+    >
       <h2 className="profile_title">WEB PUBLISHER<span>권혜진</span></h2>
       <div className="profile_list">
           <div>
@@ -49,7 +54,7 @@ const Profile = (props) => {
             </dl>
           </div>
       </div>  
-    </>
+    </motion.div>
   )
 }
 

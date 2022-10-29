@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import Filter from '../component/Filter';
 import ProjectList01 from '../component/ProjectList01';
@@ -7,7 +7,7 @@ function Project01 ()  {
   const [all, setAll] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [activeFilter, setactiveFilter] = useState("");
-  const fetchAll = async () => {  
+  const fetchAll = () => {  
   
     const projects = [
       {
@@ -182,27 +182,31 @@ function Project01 ()  {
   }, []);
 
   return (
-    <div className="project_list">
-    <Filter 
-      all={all}
-      setFiltered={setFiltered}
-      activeFilter={activeFilter}
-      setactiveFilter={setactiveFilter}
-    />
-      <motion.div
-        layout 
-        className="all-projects"
-      >
-        <AnimatePresence>
-          {filtered.map(project => (
-            <ProjectList01 
-              key={project.id} 
-              project = {project}
-            />
-          ))}
-        </AnimatePresence>
-      </motion.div>
-    </div>
+    <motion.div
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        exit={{opacity: 0}}
+    >
+      <div className="project_list">
+      <Filter 
+        all={all}
+        setFiltered={setFiltered}
+        activeFilter={activeFilter}
+        setactiveFilter={setactiveFilter}
+      />
+        <div
+          layout 
+          className="all-projects"
+        > 
+            {filtered.map(project => (
+              <ProjectList01 
+                key={project.id} 
+                project = {project}
+              />
+            ))}
+        </div>
+      </div>
+    </motion.div>
   );
 }
 
