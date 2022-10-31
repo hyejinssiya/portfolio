@@ -5,7 +5,7 @@
 .cursor.zoom {width: 75px; height: 75px;}
 
 /** sidebar **/
-.sidebar {position: fixed; left: 0; top: 0; bottom: 0; width: 320px; height: 100%; background: #1f1f1f; border-right: 1px solid rgba(255, 255, 255, 0.3); padding: 50px 15px; box-sizing: border-box; transition: width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s; z-index: 10;}
+.sidebar {position: fixed; left: 0; top: 0; bottom: 0; width: 270px; height: 100%; background: #1f1f1f; border-right: 1px solid rgba(255, 255, 255, 0.3); padding: 50px 15px; box-sizing: border-box; transition: width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s; z-index: 10;}
 .sidebar h1 {margin-top: 65px;}
 .sidebar h1 a {position: relative; left: -8px; display: block; width: 70px; margin-bottom: 55px;}
 .sidebar li {white-space: nowrap;}
@@ -46,11 +46,19 @@
 @keyframes arrMotion {0% {transform:translateX(-4px);}100% {transform:translateX(0);}}
 @keyframes arrMotion02 {0% {transform:rotate(180deg) translateX(0);}100% {transform:rotate(180deg) translateX(-4px);}}
 
-.inner {padding: 100px 100px 100px 420px;}
+.inner {padding: 100px 100px 100px 370px;}
 .open .inner {padding: 100px 100px 100px 185px;}
 
 /** Home **/
+.progress_bar {position: fixed; top: 0; left: 270px; right: 0; height: 10px; background: #8b00ff; transform-origin: 0%;}
+.open .progress_bar {left: 85px;}  
 .bg_txt {-webkit-text-stroke: 4px currentColor; letter-spacing: 0.06em; font-size: calc(100vw / 20); text-transform: uppercase; font-weight: bold; padding: 0 16px; margin: 0; white-space: nowrap; opacity: 0.3;}
+.main_project_list li a {display: block; border-top: 1px solid #fff; padding: 30px 0; font-size: 2.5rem; opacity: 0.5;}
+.main_project_list li a::after {display: block; content: ''; clear: both;}
+.main_project_list li a .tit {float: left; font-weight: 700; font-style: italic;}
+.main_project_list li a .tit em {margin-right: 50px;}
+.main_project_list li a .date {float: right; font-style: italic;}
+
 
 /** Project **/
 .all-projects {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); grid-column-gap: 2rem; grid-row-gap: 2rem; margin-top: 50px;}
