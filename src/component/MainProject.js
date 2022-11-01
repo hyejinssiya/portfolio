@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import MainProjectList from './MainProjectList';
 
 const MainProject = () => {
@@ -16,6 +16,7 @@ const MainProject = () => {
 
   return (
     <div className="section">
+       <h3>Project</h3>
         <ul className="main_project_list">
           {MainProjectList.map((mainProject) =>
             <li key={mainProject.id}>
@@ -26,7 +27,7 @@ const MainProject = () => {
             </li>
           )}
       </ul> 
-      <button type="button"></button>
+      <Link to="/project01" className="btn_more"><span>더보기</span></Link>
     </div>
   );
 };
