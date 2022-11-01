@@ -27,22 +27,20 @@ const Sidebar = (props) => {
         }
     ];
     //메뉴호버 툴팁
-    const [isHovering, setIsHovering] = useState(false);
-
-    const handleMouseOver = () => {
-        setIsHovering(true);
-    };
-  
-    const handleMouseOut = () => {
-        setIsHovering(false);
-    };
-
+    const handleMouseOver = (e) => {
+        //console.dir(e.currentTarget)
+        e.currentTarget.classList.add('tooltip')
+      };
+    
+      const handleMouseOut = (e) => {
+        e.currentTarget.classList.remove('tooltip')
+      };
     
     //메뉴리스트
     const [selectedIndex, setSelectedIndex] = useState(0);
     const listItem = menus.map((menu, index) =>
         <li key={index} className={`${selectedIndex === index ? "active" : ""}`}  onClick={() => setSelectedIndex(index)}>
-            <NavLink to={menu.link} className={isHovering ? 'tooltip' : ''} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+            <NavLink to={menu.link} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                 <img src={menu.img} alt={menu.menu} /><span>{menu.menu}</span>
             </NavLink> 
         </li>
