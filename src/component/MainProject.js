@@ -20,7 +20,7 @@ const MainProject = () => {
         <ul className="main_project_list">
           {MainProjectList.map((mainProject) =>
             <li key={mainProject.id}>
-              <a href={mainProject.link} target="_blank" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+              <a href={mainProject.link} target="_blank" rel="noreferrer" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                 <span className="tit"><em>{mainProject.number}</em>{mainProject.name}</span>
                 <span className="date">{mainProject.date}</span>
               </a>

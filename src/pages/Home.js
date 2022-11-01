@@ -1,10 +1,9 @@
 import React from 'react';
-import { motion, useTransform, useScroll } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 import MainProject from '../component/MainProject';
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
-  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-100%']);
 
   return (
     <motion.div
@@ -14,21 +13,6 @@ const Home = () => {
     >
       <motion.div className="progress_bar" style={{ scaleX: scrollYProgress }} /> 
       <MainProject />
-
-      {/* <div style={{ height: '100px' }}>
-      <div
-        style={{
-          position: 'sticky',
-          bottom: 0,
-          height: '100px',
-          width: '100%'
-        }}
-      >
-          <motion.p className="bg_txt" style={{ x }}>
-          2022 Portfolio Kwon Hyejin 2022 Portfolio Kwon Hyejin 
-          </motion.p>   
-        </div>
-      </div> */}
    </motion.div>
   );
 };
