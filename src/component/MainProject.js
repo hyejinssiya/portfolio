@@ -5,11 +5,13 @@ const MainProject = () => {
 
   const handleMouseOver = (e) => {
     //console.dir(e.currentTarget)
-    e.currentTarget.classList.add('over')
+    e.currentTarget.classList.add('over');
+    document.querySelector('.cursor').classList.add('imgShow');
   };
 
   const handleMouseOut = (e) => {
-    e.currentTarget.classList.remove('over')
+    e.currentTarget.classList.remove('over');
+    document.querySelector('.cursor').classList.remove('imgShow');
   };
 
   return (
@@ -23,7 +25,8 @@ const MainProject = () => {
               </a>
             </li>
           )}
-        </ul>      
+      </ul> 
+      <button type="button"></button>
     </div>
   );
 };

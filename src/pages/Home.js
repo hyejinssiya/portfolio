@@ -12,22 +12,23 @@ const Home = () => {
         animate={{opacity: 1}}
         exit={{opacity: 0}}
     >
-      <motion.div className="progress_bar" style={{ scaleX: scrollYProgress }} />  
-      <div style={{ height: '300px' }}>
+      <motion.div className="progress_bar" style={{ scaleX: scrollYProgress }} /> 
+      <MainProject />
+
+      {/* <div style={{ height: '100px' }}>
       <div
         style={{
           position: 'sticky',
-          top: 0,
+          bottom: 0,
           height: '100px',
           width: '100%'
         }}
       >
           <motion.p className="bg_txt" style={{ x }}>
-          Hello, I'm PUBLISHER Hello, I'm PUBLISHER Hello, I'm PUBLISHER
+          2022 Portfolio Kwon Hyejin 2022 Portfolio Kwon Hyejin 
           </motion.p>   
         </div>
-      </div>
-      <MainProject />
+      </div> */}
    </motion.div>
   );
 };
