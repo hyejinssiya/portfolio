@@ -28,7 +28,7 @@ const MainVisual = () => {
             <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
              data-aos-duration="2000"><span>Publisher</span></p>
           </div>
-          <p className="desc">본 포트폴리오는 리액트로 제작되었습니다.</p>
+          <p className="desc">본 포트폴리오는 리액트, 적응형 사이트로 제작되었습니다.</p>
           <div className="scroll_down" onClick={scrollToBottom}>
             <div className="mouse_shape">
               <div className="mouse_animation"></div>

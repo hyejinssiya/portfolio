@@ -1,7 +1,7 @@
 @charset "utf-8";
 * {max-height:1000000px;margin:0;padding:0;}
 *, *::before, *::after {cursor: none;}
-body {min-width:280px;background:#1f1f1f;color:#fff; font-family:'Poppins', 'Noto Sans KR','Malgun Gothic','맑은 고딕',Apple Gothic,arial,helvetica,sans-serif;font-size:18px;font-weight:400;line-height:1.4;-webkit-text-size-adjust:none;overflow-x: hidden;-webkit-overflow-scrolling:touch;word-wrap:break-word;word-break:keep-all;white-space:normal;letter-spacing:-1px;}
+body {min-width: 1500px;background:#1f1f1f;color:#fff; font-family:'Poppins', 'Noto Sans KR','Malgun Gothic','맑은 고딕',Apple Gothic,arial,helvetica,sans-serif;font-size:18px;font-weight:400;line-height:1.4;-webkit-text-size-adjust:none;overflow-x: hidden;-webkit-overflow-scrolling:touch;word-wrap:break-word;word-break:keep-all;white-space:normal;letter-spacing:-1px;}
 img, fieldset, button {border:none;font-family:'Noto Sans KR';}
 hr {display:none;}
 li {list-style:none;}
