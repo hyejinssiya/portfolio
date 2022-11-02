@@ -10,7 +10,7 @@ const ProjectList01 = ({ project }) => {
       transition={{ duration: 0.5 }}
       whileHover={{ scale: 0.95 }}
     >
-      <a href={project.link} target="_blank">
+      <a href={project.link} target="_blank" rel="noreferrer">
         <img src={project.imgUrl} alt="" />
         <h2>{project.name}</h2>
         <p>{project.cbt}</p>

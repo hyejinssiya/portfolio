@@ -68,7 +68,7 @@
 @keyframes leftToRight {0% {width:0;}100% {width:100%;}}
 
 .main_title .desc {display: block; font-size: 1rem; margin-left: 40%; margin-top: 30px; opacity: 0.5;}
-.scroll_down {width: 100%; text-align: center;}
+.scroll_down {width: 120px; margin: auto; text-align: center;}
 .scroll_down .mouse_shape {display: block; position: relative; width: 35px; height: 45px; margin: 50px auto 10px; border: 2px solid #fff; border-radius: 20px; box-sizing: border-box;} 
 .scroll_down .mouse_shape .mouse_animation {display: block; position: absolute; top: 25%; left: 50%; width: 2px; height: 8px; margin-left: -1px; background-color:#fff; animation:ball-scroll 2s linear infinite;} 
 
@@ -93,7 +93,7 @@
 .contact_wrap {min-width: 300px; max-width: 500px; margin: 80px auto 0;}
 .contact_wrap h4 {font-size: 2rem; margin-bottom: 20px;}
 .contact_wrap input { width: 100%; border-bottom: 2px solid #afafaf; font-size: 1.3rem; color: #fff; padding: 7px 0; background: transparent; transition: border-color 0.2s; margin-bottom: 20px; transition: all 0.3s;}
-.contact_wrap input[type="submit"] { padding: 15px; border: 0; background: #fff; color: #222; border-radius: 5px; margin-top: 20px; cursor: pointer; }
+.contact_wrap input[type="submit"] { padding: 15px; border: 0; background: #fff; color: #222; border-radius: 5px; margin-top: 20px;}
 .contact_wrap textarea {padding: 20px; background: transparent; border: 2px solid #afafaf; border-radius: 5px; width: 100%; height: 200px; font-size: 1.3rem; color: #fff; box-sizing: border-box; transition: all 0.3s;}
 .contact_wrap input:focus, .contact_wrap textarea:focus {border-color: #fff;}
 

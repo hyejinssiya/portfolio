@@ -23,7 +23,7 @@ export default function Cursor() {
         Array.from(document.querySelectorAll('a')).map((el) => setLink(el));
     };
 
-    Array.from(document.querySelectorAll('a, button')).map((el) => {
+    Array.from(document.querySelectorAll('a, button, input[type="submit"], .scroll_down')).map((el) => {
       el.addEventListener('mouseenter', zoomIn);
       el.addEventListener('mouseleave', zoomout);
     });
