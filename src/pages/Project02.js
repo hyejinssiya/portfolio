@@ -8,7 +8,13 @@ const Project02 = (props) => {
         animate={{opacity: 1}}
         exit={{opacity: 0}}
         >
-          <h2>대기중인 페이지입니다 ;)</h2>
+          <ul className="pers_list">
+            <li>
+              <a href="https://guileless-kitsune-c64a4d.netlify.app/" target="_blank" rel="noreferrer">
+                SUBWAY <span>Vue.js</span>
+              </a>
+            </li>
+          </ul>
         </motion.div>
       );
 }

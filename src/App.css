@@ -107,6 +107,11 @@
 .filter-container button:hover {background: #8b00ff; border-color: #8b00ff;}
 .filter-container button.active {background: #8b00ff; border-color: #8b00ff;}
 
+.pers_list li a {display: block; width: 50%; font-size: 4rem; font-weight: 700; border-bottom: 1px solid rgba(255, 255, 255, 0.5);}
+.pers_list li a span {font-size: 2rem; margin-left: 10px;}
+.pers_list li a::after {display: block; content: ''; width: 0; height: 1px;}
+.pers_list li a:hover::after {animation: leftToRight 0.4s linear both; background: #fff;}
+
 /** Profile **/
 .profile_title {font-size: 5rem; line-height: 1.2;}
 .profile_title span {display: block; font-size: 3rem;}

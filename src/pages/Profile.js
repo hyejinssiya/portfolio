@@ -19,6 +19,8 @@ const Profile = (props) => {
               <li>jQuery</li>
               <li>Javascript</li>
               <li>React</li>
+              <li>Vue</li>
+              <li>Vuetify</li>
               <li>Git</li>
               <li>nexacro</li>
               <li>웹접근성(Web Accessibility)</li>
