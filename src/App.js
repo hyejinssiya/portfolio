@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import './App.css';
 import Sidebar from "./component/Sidebar";
@@ -12,34 +12,34 @@ import Cursor from "./component/Cursor";
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}> 
+    <HashRouter basename={process.env.PUBLIC_URL}> 
       <Wrap>
         <Cursor />
         <Sidebar />
         <Inner>
         <AnimatePresence>
-        <Routes>
-          <Route
-            path="/project01"
-            element={<Project01 />}
-          />
-          <Route
-              path="/project02"
-              element={<Project02 />} 
+          <Switch>
+            <Route
+              path="/project01"
+              component={Project01}
             />
-          <Route
-              path="/profile"
-              element={<Profile />}
-             />
-          <Route
-              path="/"
-              element={<Home />}
-              exact />
-          </Routes>
+            <Route
+                path="/project02"
+                component={Project02} 
+              />
+            <Route
+                  path="/profile"
+                  component={Profile}
+              />
+            <Route
+                path="/"
+                component={Home}
+                  exact />
+            </Switch>
           </AnimatePresence>
         </Inner>
       </Wrap>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
