@@ -12,7 +12,7 @@ import Cursor from "./component/Cursor";
 
 function App() {
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}> 
+    <HashRouter> 
       <Wrap>
         <Cursor />
         <Sidebar />
